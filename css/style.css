@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    overflow-y: hidden;
+}
 
 /* header */
 header {
@@ -36,7 +39,7 @@ header {
     padding-right: 30px;
 } 
 .header-deskripsi button {
-    background-color: blueviolet;
+    background-color: #5000ca;
     padding: 10px 30px;
     border-radius: 6px;
     border-top-right-radius: 100%;
@@ -48,16 +51,19 @@ header {
     color: #333;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.2rem;
+    text-shadow: 0px 0px 2px white;
 }
 
 /* navbar */
 nav {
     height: calc(100vh - 500px);
     width: 100%;
-    background-color: black;
-    background-image: url(../img/navbar.jpg);
+    background-color: red;
+    background-image: url(../img/navbar-3.jpg);
+    background-blend-mode: luminosity;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 nav ul {
     width: 100%;
@@ -69,23 +75,141 @@ nav ul {
     justify-items: end;
     list-style: none;
 }
-nav ul li:last-child {
-    justify-self: center;
-    font-size: 1.5rem;
-    justify-content: left;
-    align-items: start;
-}
 nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 4px solid rgba(255, 0, 0, 0.8);
+    text-shadow: 1px 1px 1px balck;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 60% 8px 60% 8px;
     height: 70%;
-    width: 90%;
+    width: 80%;
+}
+nav ul li:hover {
+    border: 3px solid #333;;
+}
+nav ul li:hover a {
+    color: #333;
+}
+nav ul li:last-child:hover {
+    border: 3px solid rgba(255, 0, 0, 0.8);
+}
+nav ul li:last-child {
+    justify-self: center;
+    font-size: 1rem;
+    justify-content: left;
+    align-items: start;
+    color: white;
+    padding: 10px 30px;
+    flex-direction: column;
+    background-color: #5000ca;
 }
 nav ul a {
     text-decoration: none;
     font-size: 2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 0, 0, 0.9);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* content */
+/* main content */
+.content {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    background: url(../img/triangles_pattern.webp), linear-gradient(to bottom right, black 60%, white );
+    background-blend-mode: multiply;
+    background-size: 100px;
+    position: relative;
+    z-index: -2;
+    box-sizing: border-box;
+}
+.main-content .gelombang {
+    transform: rotate(180deg);
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+}
+.main-content .bungkus {
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.title {
+    font-size: 2rem;
+    width: 80%;
+    text-shadow: 1px 1px 1px white;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0 0px 10px 50px;
+}
+.gambar {
+    height: 500px;
+    width: 80%;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: #5000ca;
+    border-right: 10px double black;
+    border-bottom: 10px double black;
+}
+.gambar picture {
+    position: relative;
+}
+.gambar figcaption {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 255, 0.2);
+    padding: 0px 30px;
+    border: 2px solid white;
+    color: white;
+}
+.gambar img {
+    width: 85%;
+}
+/* form */
+.form form {
+    display: grid;
+    align-content: center;
+    height:80%;
+    background-color: white;
+    padding: 50px 20px;
+    border-bottom-left-radius: 30%;
+    border: 10px dashed black;
+    border-top: none;
+    border-right: initial;
+}
+.form form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px;
+}
+.form h2 {
+    text-align: center;
+    color: bisque;
+    text-shadow: 0px 0px 1px red;
+    font-size: 2rem;
+}
+.form label {
+    font-size: 1.2rem;
+}
+.form button {
+    width: 40%;
+    margin: 30px auto;
+    font-weight: bold;
+    background-color: #5000ca;
+    color: white;
+}
+/* footer */
+footer {
+    padding: 10px 30px;
+    height: 10vh;
 }
