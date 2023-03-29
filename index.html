@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="home">
         <header>
             <div class="header-gambar">
                 <img src="img/header.jpg" title="Sneakers">
@@ -18,15 +18,18 @@
                 <h1>Sneakers Cleaning</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur deserunt aperiam ullam ex temporibus minima quisquam ad repellat mollitia!</p>
                 <button>
-                    <a href="#">Contact Now</a>
+                    <a href="#contact" class="scroller">
+                        <img src="img/icon/circle-tool-svgrepo-com.svg" alt=""> 
+                        Contact Now
+                    </a>
                 </button>
             </div>
         </header>
 
         <nav>
             <ul>
-                <li><a href="#">Process</a></li>
-                <li><a href="#">Room Plan</a></li>
+                <li><a href="#process" class="scroller">Process</a></li>
+                <li><a href="#" class="scroller">Room Plan</a></li>
                 <li>
                     <h3>Address:</h3>
                     <p>Indonesia, West Java, Tasikmalaya City, Kebangsaan street, No.100</p>
@@ -35,26 +38,46 @@
             </ul>
         </nav>
 
-        <section class="content" id="contact">
+        <section class="content">
             <div class="main-content">
                 <img src="img/wave.svg" class="gelombang"></img>
-                <div class="bungkus">
-                    <div class="title">
+                <div class="bungkus process">
+                    <div class="title" id="process">
                         <h2>How we process your shoes</h2>
                     </div>
                     <div class="gambar">
                         <picture>
                             <img src="img/process-1.jpg" title="Tools">
-                            <figcaption>All of tools needed</figcaption>
+                            <figcaption>Tools</figcaption>
                         </picture>
                         <picture>
                             <img src="img/process-2.jpg" title="Tools">
                             <figcaption>Cleaning</figcaption>
                         </picture>
+                        <picture>
+                            <img src="img/process-3.jpg" title="Tools">
+                            <figcaption>Drying</figcaption>
+                        </picture>
+                        <picture>
+                            <img src="img/process-4.jpg" title="Tools">
+                            <figcaption>Done</figcaption>
+                        </picture>
                     </div>
                 </div>
+
+                <div class="bungkus room">
+                    <h1>Room Plan</h1>
+                    <div class="gallery">
+                        <span><img src="img/recieptionist.jpg"></span>
+                        <span><img src="img/the-waiting-room.jpg"></span>
+                        <span><img src="img/logistic.jpg"></span>
+                        <span><img src="img/washing-room.jpg"></span>
+                        <span><img src="img/the-receiving-room.jpg"></span>
+                    </div>
+                </div>
+
             </div>
-            <div class="form">
+            <div class="form" id="contact">
                 <form action="">
                     <div>
                         <h2>Order Now</h2>
@@ -80,7 +103,17 @@
 
         <footer>
             <h3>Built by Muhammad Yuda Yudistira</h3>
+            <span>
+                <a href="#home" class="scroller">
+                    <img src="img/brush-tool-svgrepo-com.svg" alt="">
+                </a>
+            </span>
         </footer>
     </div>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="js/script.js"></script>
 </body>
 </html>
