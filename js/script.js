@@ -1,14 +1,14 @@
-// smooth scrolling
-$('.scroller').on('click', function(e) {
-    e.preventDefault()
+// // smooth scrolling
+// $('.scroller').on('click', function(e) {
+//     e.preventDefault()
 
-    const tujuan = $(this).attr('href')
-    const tujuanElement = $(tujuan)
+//     const tujuan = $(this).attr('href')
+//     const tujuanElement = $(tujuan)
 
-    $('html').animate({
-        scrollTop: tujuanElement.offset().top
-    }, 1000)
-})
+//     $('html').animate({
+//         scrollTop: tujuanElement.offset().top
+//     }, 1000)
+// })
 
 // menu active
 const berganti = document.querySelectorAll('.berganti')
@@ -32,7 +32,9 @@ berganti.forEach((hal) => {
         for(let i = 0; i < lembar.length; i++) {
             lembar[i].style.display = 'none'
         }
+        // jalanken
         elementTujuan.style.display = 'flex'
-        console.log(elementTujuan)
+        const altFooter = document.querySelector('footer')
+        altFooter.classList.add('alternative')
     }) 
 });

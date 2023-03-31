@@ -68,7 +68,10 @@ header {
 
 /* navbar */
 .active {
-    color: yellow;
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border: 6px solid #333; */
+    border-radius: 60% 8px 60% 8px;
 }
 nav {
     height: calc(100vh - 500px);
@@ -128,6 +131,10 @@ nav ul a {
     color: rgba(255, 0, 0, 0.9);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 80px;
 }
 
 /* content */
@@ -390,4 +397,5 @@ footer span img {
     z-index: inherit;
     color: white;
     line-height: 40px;
+    justify-content: end;
 }
